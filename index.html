@@ -1,0 +1,131 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Group 2 – ACSAD Automata</title>
+    <link rel="preconnect" href="https://cdnjs.cloudflare.com" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;0,9..40,600;0,9..40,700;1,9..40,400&family=DM+Mono:wght@400;500&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/styles/atom-one-light.min.css"
+    />
+    <link rel="stylesheet" href="src/style.css" />
+  </head>
+  <body>
+    <div class="app-shell">
+      <aside id="sidebar" class="sidebar" aria-label="Group navigation">
+        <div class="sidebar-header">
+          <div class="brand">
+            <div class="brand-mark" aria-hidden="true">G2</div>
+            <div class="brand-copy">
+              <p class="eyebrow">ACSAD</p>
+              <h1>Automata Lab Acts</h1>
+            </div>
+          </div>
+          <button
+            id="sidebarRailToggleBtn"
+            class="sidebar-toggle sidebar-toggle-ghost"
+            type="button"
+            aria-controls="sidebar"
+            aria-expanded="true"
+            aria-label="Collapse sidebar"
+          >
+            <span class="toggle-arrow" aria-hidden="true"></span>
+          </button>
+        </div>
+        <nav id="groupList" class="group-list" aria-label="Groups"></nav>
+      </aside>
+
+      <button id="sidebarOverlay" class="sidebar-overlay" type="button" aria-label="Close navigation"></button>
+
+      <main id="groupContent" class="main-content group-content">
+        <section class="main-toolbar" aria-label="Layout controls">
+          <div class="toolbar-copy">
+            <p class="eyebrow">Automata</p>
+            <p class="toolbar-description">
+              A lab-first workspace for reviewing algorithm source code, screenshots, and executable outputs.
+            </p>
+          </div>
+          <button id="mobileSidebarBtn" class="mobile-sidebar-btn" type="button" aria-label="Open navigation">
+            <span></span><span></span><span></span>
+          </button>
+        </section>
+
+        <section class="hero-card">
+          <div>
+            <p class="eyebrow">Automata Laboratory Portfolio</p>
+            <h2 id="groupName">Loading group...</h2>
+            <p id="memberNames" class="members">Please wait while the lab acts are loaded.</p>
+          </div>
+          <a id="downloadBtn" class="download-btn" href="#" download aria-disabled="true">
+            Download Group Archive
+          </a>
+        </section>
+
+        <section class="lab-card" aria-live="polite">
+          <div id="tabRow" class="tab-row" role="tablist" aria-label="Lab acts"></div>
+          <div id="subTabRow" class="sub-tab-row" role="tablist" aria-label="Recursion lab acts" hidden></div>
+
+          <div id="skeletonState" class="skeleton-state">
+            <div class="skeleton-heading">
+              <div class="skeleton-line short"></div>
+              <div class="skeleton-line medium"></div>
+              <div class="skeleton-line long"></div>
+            </div>
+            <div class="skeleton-preview"></div>
+            <div class="skeleton-code"></div>
+          </div>
+
+          <div id="emptyState" class="empty-state" hidden>
+            Select a lab act above to preview its source code and run the algorithm.
+          </div>
+
+          <article id="labPanel" class="lab-panel" hidden>
+            <div class="lab-heading">
+              <div>
+                <p class="eyebrow">Selected Lab Act</p>
+                <h3 id="labTitle">No lab selected</h3>
+              </div>
+              <p id="labDescription" class="lab-description"></p>
+            </div>
+
+            <div class="preview-box" id="previewBox">
+              <img id="screenshotImage" alt="GUI preview screenshot" hidden />
+              <span id="previewFallback">GUI Preview — screenshot coming soon</span>
+            </div>
+
+            <section class="code-section code-block" aria-labelledby="sourceTitle">
+              <div class="section-title-row">
+                <h4 id="sourceTitle">Source Code</h4>
+                <span id="sourceFile" class="file-pill"></span>
+              </div>
+              <pre><code id="codeBlock" class="language-javascript"></code></pre>
+            </section>
+
+            <section class="try-panel try-it-panel" aria-labelledby="tryTitle">
+              <div>
+                <p class="eyebrow">Interactive Runtime</p>
+                <h4 id="tryTitle">Try It</h4>
+              </div>
+              <div id="inputFields" class="input-fields"></div>
+              <button id="runBtn" class="run-btn" type="button">▶ Run</button>
+              <label id="outputLabel" for="outputBox">Output</label>
+              <pre id="outputBox" class="output-box" aria-live="polite">Program output will appear here.</pre>
+            </section>
+          </article>
+        </section>
+      </main>
+    </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/highlight.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/languages/java.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/languages/javascript.min.js"></script>
+    <script type="module" src="src/app.js"></script>
+  </body>
+</html>

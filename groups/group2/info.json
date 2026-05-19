@@ -1,0 +1,87 @@
+{
+  "group": "Group 2",
+  "members": [
+    "Member One",
+    "Member Two",
+    "Member Three",
+    "Member Four",
+    "Member Five"
+  ],
+  "download": "G2_AUTOMATA-ALGO.zip",
+  "labacts": [
+    {
+      "name": "Division Algorithm",
+      "file": "DivisionAlgorithm.js",
+      "screenshot": "screenshots/DivisionAlgorithm.png",
+      "description": "Computes the quotient and remainder for two integers using the division algorithm. Given integers a and b, finds q and r such that a = b(q) + r.",
+      "inputs": [
+        { "label": "First Integer", "placeholder": "positive integer, e.g. 17" },
+        { "label": "Second Integer", "placeholder": "positive integer, e.g. 5" }
+      ]
+    },
+    {
+      "name": "Euclidean Algorithm",
+      "file": "EuclideanAlgorithm.js",
+      "screenshot": "screenshots/EuclideanAlgorithm.png",
+      "description": "Finds the Greatest Common Divisor (GCD) and Least Common Multiple (LCM) of two positive integers using the Euclidean algorithm.",
+      "inputs": [
+        { "label": "First Integer", "placeholder": "positive integer, e.g. 48" },
+        { "label": "Second Integer", "placeholder": "positive integer, e.g. 18" }
+      ]
+    },
+    {
+      "name": "Collatz Sequence",
+      "file": "CollatzSequence.js",
+      "screenshot": "screenshots/CollatzSequence.png",
+      "description": "Finds all terms of the Collatz sequence starting from a given positive odd integer. The sequence follows: if odd → 3n+1, if even → n/2, until reaching 1.",
+      "inputs": [
+        { "label": "Initial Value", "placeholder": "positive odd integer, e.g. 7" }
+      ]
+    },
+    {
+      "name": "Palindrome Checker",
+      "file": "PalindromeChecker.js",
+      "screenshot": "screenshots/PalindromeChecker.png",
+      "description": "Checks whether a given string is a palindrome. Ignores spaces, punctuation, and capitalization during the check.",
+      "inputs": [
+        { "label": "String", "placeholder": "e.g. A man a plan a canal Panama" }
+      ]
+    },
+    {
+      "name": "Recursion",
+      "file": null,
+      "screenshot": null,
+      "description": "Recursive sequence generators: Fibonacci, Lucas, and Tribonacci numbers.",
+      "inputs": [],
+      "subtabs": [
+        {
+          "name": "Fibonacci",
+          "file": "Fibonacci.js",
+          "screenshot": "screenshots/Fibonacci.png",
+          "description": "Generates Fibonacci numbers recursively. The sequence starts with 0, 1 and each term is the sum of the two preceding terms. Valid input: number of terms greater than 2.",
+          "inputs": [
+            { "label": "Number of Terms", "placeholder": "integer greater than 2, e.g. 5" }
+          ]
+        },
+        {
+          "name": "Lucas",
+          "file": "Lucas.js",
+          "screenshot": "screenshots/Lucas.png",
+          "description": "Generates Lucas numbers recursively. Similar to Fibonacci but starts with 2, 1. Each subsequent term is the sum of the two preceding terms. Valid input: number of terms greater than 2.",
+          "inputs": [
+            { "label": "Number of Terms", "placeholder": "integer greater than 2, e.g. 5" }
+          ]
+        },
+        {
+          "name": "Tribonacci",
+          "file": "Tribonacci.js",
+          "screenshot": "screenshots/Tribonacci.png",
+          "description": "Generates Tribonacci numbers recursively. Starts with 0, 0, 1 and each term is the sum of the three preceding terms. Valid input: number of terms greater than 3.",
+          "inputs": [
+            { "label": "Number of Terms", "placeholder": "integer greater than 3, e.g. 10" }
+          ]
+        }
+      ]
+    }
+  ]
+}
