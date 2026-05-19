@@ -1,6 +1,7 @@
 export default {
   build: {
     outDir: 'dist',
-    emptyOutDir: true,
-  }
+    emptyOutDir: false,
+  },
+  publicDir: '.',
 }
