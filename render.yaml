@@ -1,8 +1,6 @@
 services:
   - type: static
     name: group2-automata
-    buildCommand: npm install && npm run build
+    buildCommand: npm run build
     staticPublishPath: ./dist
-    routes:
-      - path: /*
-        destination: /index.html
+
